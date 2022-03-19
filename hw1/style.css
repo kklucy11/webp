@@ -1,0 +1,36 @@
+h1
+{
+    background-color: #FFCCCC;
+    font-family:微軟正黑體;
+    font-size: 700;
+    font-weight: 800;    
+}
+em
+{
+    font-size:500;
+    color:	#674cdd;
+}
+h4
+{
+    margin-left: 2cm;
+}
+h3
+{
+    font-size:600;
+    color:rgb(46, 9, 23);
+    letter-spacing:0.5cm;
+}
+a:link {color:#9955FF}
+a:visited{color:#00AA00}
+@media screen and (min-width:500px){ 
+    .box{
+      width: 500px;
+      background-color: green;
+    }
+   }
+   @media screen and (min-width:1000px){ 
+    .box{
+      width: 1000px;
+      background-color: blue;
+    }
+   }
