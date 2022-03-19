@@ -1,35 +1,71 @@
-h1
-{
-    background-color: #FFCCCC;
-    font-family:微軟正黑體;
-    font-size: 700;
-    font-weight: 800;    
+*{
+
+    padding: 0;
+    list-style:none;
 }
-em
-{
-    font-size:500;
-    color:	#674cdd;
+.heading{
+    margin: 0 0px 20px;
+    background-color: rgb(182, 158, 158);
+    padding: 30px 10px;
 }
-h4
-{
-    margin-left: 2cm;
+img{
+    vertical-align: bottom;
 }
-h3
-{
-    font-size:600;
-    color:rgb(46, 9, 23);
-    letter-spacing:0.5cm;
+.banner img{
+    width: 100%;
 }
-a:link {color:#9955FF}
-a:visited{color:#00AA00}
-@media screen and (min-width:500px){ 
-    h4{
-      margin-left:1cm;
+.item-group{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.title h2{
+    margin: 0 0px 20px;
+    background-color: rgb(182, 158, 158);
+    padding: 30px 10px;
+    font-size: 46px;
+}
+.title p{
+    background-color: rgb(238, 209, 209);
+    font-size: 22px;
+    padding: 30px 10px;
+    margin: 0 0px 20px;
+}
+.item{
+    margin: 0 10px 40px;
+}
+.item .pic img{
+    width: 100%;
+}
+.item .text h3{
+    font-size: 22px;
+    text-align: center;
+}
+.item-group{
+    display: flex;
+}
+.service .text{
+    font-size: 30px;
+    color: rgb(92, 92, 235);
+}
+@media screen and (min-width:768px){
+    .item-group{
+        display: flex;
     }
-   }
-   @media screen and (min-width:1000px){ 
-    h4
-    {
-        margin-left:0.5cm;
+    .service .item{
+        display: flex;
     }
-   }
+    .service .item .pic,
+    .service .item .text{
+        width: 50%;
+        margin: 0;
+    }
+    .service .item .text{
+        display: flex;
+        padding: 0 20px;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}
