@@ -1,5 +1,4 @@
 *{
-
     padding: 0;
     list-style:none;
 }
@@ -41,9 +40,6 @@ img{
 .item .text h3{
     font-size: 22px;
     text-align: center;
-}
-.item-group{
-    display: flex;
 }
 .service .text{
     font-size: 30px;
