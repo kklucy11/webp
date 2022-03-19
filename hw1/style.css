@@ -2,66 +2,66 @@
     padding: 0;
     list-style:none;
 }
-.heading{
-    margin: 0 0px 20px;
-    background-color: rgb(182, 158, 158);
-    padding: 30px 10px;
-}
 img{
     vertical-align: bottom;
 }
-.banner img{
-    width: 100%;
+.heading{
+    text-align: center;
+    margin: 0 0px 20px;
+    padding: 30px 10px;
+    background-color: #ccc;
 }
 .item-group{
     width: 100%;
     max-width: 1400px;
     margin: auto;
 }
-
-.title h2{
+.banner img{
+    width: 100%;
+}
+.title {
     margin: 0 0px 20px;
-    background-color: rgb(182, 158, 158);
     padding: 30px 10px;
-    font-size: 46px;
+    background-color: #ccc;
+}
+.title h2{
+    font-style: 46px;
 }
 .title p{
-    background-color: rgb(238, 209, 209);
-    font-size: 22px;
-    padding: 30px 10px;
-    margin: 0 0px 20px;
+    font-style: 26px;
 }
 .item{
     margin: 0 10px 40px;
 }
-.item .pic img{
-    width: 100%;
-}
 .item .text h3{
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
 }
-.service .text{
-    font-size: 30px;
-    color: rgb(92, 92, 235);
+.item .pic img{
+    max-width: 100%;
 }
-@media screen and (min-width:768px){
+.service{
+    margin: 60px 0;
+    background-color: #ffa;
+}
+
+@media screen  and (min-width: 768px){
     .item-group{
         display: flex;
     }
-    .service .item{
+    .service .item {
         display: flex;
+        margin:0;
     }
     .service .item .pic,
     .service .item .text{
         width: 50%;
-        margin: 0;
     }
     .service .item .text{
         display: flex;
         padding: 0 20px;
+        box-sizing: border-box;
         flex-direction: column;
         justify-content: center;
-        box-sizing: border-box;
     }
 }
