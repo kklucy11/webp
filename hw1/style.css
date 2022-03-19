@@ -23,14 +23,13 @@ h3
 a:link {color:#9955FF}
 a:visited{color:#00AA00}
 @media screen and (min-width:500px){ 
-    .box{
-      width: 500px;
-      background-color: green;
+    h4{
+      margin-left:1cm;
     }
    }
    @media screen and (min-width:1000px){ 
-    .box{
-      width: 1000px;
-      background-color: blue;
+    h4
+    {
+        margin-left:0.5cm;
     }
    }
