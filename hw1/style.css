@@ -45,7 +45,7 @@ img{
     background-color: #ffa;
 }
 
-@media screen {
+@media screen  and (min-width: 768px){
     .item-group{
         display: flex;
     }
@@ -66,7 +66,7 @@ img{
     }
 }
 
-@media (min-width: 768px){
+@media screen  and (min-width: 768px){
     .item-group{
         display: flex;
     }
@@ -85,4 +85,15 @@ img{
         flex-direction: column;
         justify-content: center;
     }
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px){
+    .item-group{
+        display: flex;
+    }
+    .service .item .pic,
+    .service .item .text{
+        width: 50%;
+    }
+    
 }
