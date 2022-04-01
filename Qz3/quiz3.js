@@ -1,7 +1,10 @@
-var enter = document.getElementById('enter');
+const log = document.getElementById('log');
+
 document.addEventListener('keydown', logkey);
-function logkey(a) {
-    if (65 <= a.keyCode && a.keyCode <= 112) {
-        enter.textContent += `${a.keyCode}`;
+
+function logkey(e) {
+    if(65 <= e.keyCode && e.keyCode <= 112)
+    {
+        log.textContent += ` ${e.key} `;
     }
 }
