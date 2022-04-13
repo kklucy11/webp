@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>quiz5</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#myList").click(function (e) {
+                if (e.target.tagName.toLowerCase() === 'li') {
+                    console.log(e.target.textContent);
+                }
+            })
+            $("#myList").append('<li>hello.cgu!</li>');
+        })
+    </script>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Item01</li>
+        <li>Item02</li>
+        <li>Item03</li>
+    </ul>
+</body>
+
+</html>
