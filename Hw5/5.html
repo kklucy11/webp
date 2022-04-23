@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1,div{
+            text-align: center;
+            margin:0px;
+        }
+        .p3{
+            display: inline;
+            float:left;
+            width: 33.3%;
+            height: 100%;
+            border:1px;
+            font-size: 40px;
+        }
+        img {
+            width: 120px;
+            height: 80px;
+            margin: 0;
+        }
+        .ar{
+            width: 15px;
+            height: 30px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        var dataUrl = "https://ptx.transportdata.tw/MOTC/v2/Rail/Metro/ODFare/TYMC?%24top=420&%24format=JSON";
+        var data = $.getJSON(dataUrl);
+        Station=["#S1","#S2","#S3","#S4","#S5","#S6","#S7","#S8","#S9","#S10","#S11","#S12","#S13","#S14","#S15","#S16","#S17","#S18","#S19","#S20","#S21"];
+        data.done(function (msg) {
+            console.log(msg);
+            mLen = msg.length;
+            console.log(mLen);
+            for (var i = 419; i >= 0; i -= 21) {
+                console.log(msg[i].OriginStationID + "往" + msg[i].DestinationStationID + " Time: " + msg[i].TravelTime + " 票價: " + msg[i].Fares[0].Price+" i="+i);
+                console.log((i+22)/21);
+                console.log(Station[(i+1)/21]);
+                $('<h1 id=A'+(i+22)/21+'><img src="img/A'+(i+22)/21+'.png"></h1>').insertAfter("#set");
+                $('<h1 id=S'+(i+22)/21+'></h1>').insertAfter("#set");
+                $(Station[(i+22)/21-1]).prepend('<div class="p3" id=S'+(i+22)/21+'>'+msg[i].Fares[0].Price+'</div>');
+                $(Station[(i+22)/21-1]).prepend('<div class="p3"><img class="ar"src=img/arrow.png></div>');
+                $(Station[(i+22)/21-1]).prepend('<div class="p3" id=S'+(i+22)/21+'>'+msg[i].TravelTime+'</div>');
+                /*$('<div class="p3" id=S'+(i+22)/21+'>'+msg[i].Fares[0].Price+'</div>').insert(Station[(i+1)/21]);
+                $('<div class="p3"><img class="ar"src=img/arrow.png></div>').insert(Station[(i+1)/21]);
+                $('<div class="p3" id=S'+(i+22)/21+'>'+msg[i].TravelTime+'</div>').insert(Station[(i+1)/21]);*/
+            }
+            $('<h1 id=A1><img src="img/A1.png"></h1>').insertAfter("#set");
+
+        });
+        data.fail(function (msg) {
+            console.log(msg);
+            $("#contain").html("fail getting data");
+        });
+    </script>
+</head>
+<body>
+    <h1 id="set">
+        <div class="p3">間隔時間(分鐘)</div>
+        <div class="p3">各站名稱</div>
+        <div class="p3">票價</div>
+    </h1>
+</body>
+
+</html>
