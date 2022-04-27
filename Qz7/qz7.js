@@ -37,7 +37,7 @@ console.log(123);
     {
         console.log(obj.data[i].stationName);
         $('body').append($('<h2>'+obj.data[i].stationName+'('+obj.data[i].stationNo+')'+'</h2>'));
-        $('body').append($('<h3>' + obj.data[i].recTime.substring(0, 4) + '年' + obj.data[i].recTime.substring(4, 6) + '月' + obj.data[i].recTime.substring(6, 8) + '號' + obj.data[i].recTime.substring(8, 10) + '時'+obj.data[i].recTime.substring(10, 12) + '</h3>'));
+        $('body').append($('<h3>' + obj.data[i].recTime.substring(0, 4) + '年' + obj.data[i].recTime.substring(4, 6) + '月' + obj.data[i].recTime.substring(6, 8) + '號' + obj.data[i].recTime.substring(8, 10) + '點'+obj.data[i].recTime.substring(10, 12) + '分</h3>'));
         $('body').append($('<h3>即時雨量'+obj.data[i].rain+'</h3>'));
     }
     
