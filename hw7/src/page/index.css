@@ -1,0 +1,25 @@
+.app {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #000;
+    box-sizing: 50%;
+    float: right;
+}
+
+.login {
+    text-align:center;
+}
+p{
+    text-align: center;
+}
+.btn {
+
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    box-sizing: border-box;
+    width: 25%;
+    padding: 15px;
+    float: right;
+}
